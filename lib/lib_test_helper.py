@@ -30,7 +30,6 @@ class Helper:
         bool_value = False
         data = {'command': command_value}
         response = self.request.post(f'{self.base_url}{station}', data)
-        print(f'interval response is {response}')
         logger.info('Verifying the response status code')
         if response.status_code == 200:
             logger.info('Verifying the interval')
@@ -48,9 +47,7 @@ class Helper:
             pay_load = n_value
         bool_value = False
         data = {'command': command_value, 'payload': pay_load}
-        print(f'pay load is {pay_load}')
         response = self.request.post(f'{self.base_url}{station}', data)
-        print(f'interval response is {response}')
         logger.info('Verifying the response status code')
         if response.status_code == 200:
             logger.info('Verifying the response result')

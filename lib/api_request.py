@@ -23,7 +23,7 @@ class APIRequest:
         except ConnectionError:
             logger.error(f'Connection Error connecting to {url}')
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            logger.error(f"An unexpected error occurred: {e}")
 
     def __get_responses(self, response):
         status_code = response.status_code
