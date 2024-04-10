@@ -1,0 +1,6 @@
+# PyCharm
+.idea/
+
+# Byte-compiled files
+*.pyc
+__pycache__/
